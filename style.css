@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display')
+
+*{
+    margin:0 ; 
+    padding:0; 
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+body{
+    
+    display:flex ;
+    height : 100vh;
+    justify-content: center;
+    align-items: center; 
+    padding  :10px ; 
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+
+}
+
+#content{
+
+    filter: none;
+
+
+
+ } 
+
+.container{
+
+    max-width: 700px;
+    width:100% ;
+    background : #fff; 
+    padding : 25px 30px ; 
+    border-radius:  5px;
+}
+#overlay {
+    position: fixed; 
+  display: none; 
+  width: 100%; 
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+.container .title {
+
+        font-size : 25px ; 
+        font-weight: 500;
+        position : relative ; 
+    
+}
+
+.container .title::before{
+    content : '' ; 
+    position: absolute;
+    left :0 ; 
+    bottom : 0 ; 
+    height : 3px ;
+    width : 30px; 
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+
+
+}
+.container form .userDetails{
+    display : flex ; 
+    flex-direction : column; 
+    justify-content : space-between ; 
+}
+
+form .userDetails .inputContainer{
+
+    width: calc(100% / 2- 20px ); 
+
+
+}
+
+.userDetails .input-box input{
+    height : 25px ; 
+    width : 90% ; display : block ; 
+    height : 25px ; 
+    width : 90%  ; 
+    outline :none ;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px ;
+    border-bottom-width: 3px; 
+    transition: all 0.3s ease ; 
+    
+}
+
+.userDetail .inputContainer .dataInput {
+    font-weight: 500;
+    margin-bottom: 5px ;
+
+
+
+}
+
+.userDetails .inputContainer input{
+    display : block ; 
+    height : 25px ; 
+    width : 90%  ; 
+    outline :none ;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px ;
+    border-bottom-width: 3px; 
+    transition: all 0.3s ease ; 
+}
+
+.userDetails .input-box input:focus,
+.userDetails .input-box input:valid,
+.userDetails .inputContainer input:focus,
+.userDetails .inputContainer input:valid{
+
+    border-color: #b700ff;
+}
+
+form .button {
+    height: 25px ;
+    width : 96.5% ;
+ 
+}
+
+form .button input{
+    font-weight: 500;
+    font-size: 18px ;
+    letter-spacing: 1px; 
+    border-radius : 5px ; 
+
+
+
+
+    height: 100%; 
+    width : 100%;
+    outline :none  ; 
+    color : #fff; 
+   
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+
+
+}
+
+form .button input:hover{
+    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+    
+}
+
+#overlay { 
+    margin : 0px ; 
+    padding : 0px ;
+}
+
+#outputFinal {
+    font-family: "Ubuntu", sans-serif;
+    width : 300px ; 
+    height : 430px ; 
+    background : #fff;
+    border-radius : 6px ; 
+    position : absolute;
+    top : 50% ; 
+    left : 50%; 
+    transform : translate(-50%,-50%) ; 
+    box-shadow: 0px  1px 10px 1px #000;
+    box-sizing: border-box;
+    overflow : hidden ; 
+    display: inline-block;
+}
+
+.upper-container { 
+    height: 150px ; 
+    background: #7f00ff;  
+
+}
+.lower-container{
+    align-items : center ;
+    height: 280px ;
+    background: coral ; 
+    padding : 15px; 
+    padding-top : 10px;
+    text-align : center; 
+}
+
+ .lower-container #detailsName{
+    color : #ffffff; 
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0px 0px ; 
+    margin-top: 0px ;  
+} 
+
+.name-container {
+    padding: 12px 12px 12px 12px  ;  
+    background : #2d1744; 
+    box-sizing :  border-box; 
+    line-height : .6 ; 
+    font-weight : lighter ; 
+    border-radius: 10px; 
+}
+
+.color-box{
+
+    background: #2d1744 ;
+    border-radius : 10px ; 
+
+
+}
+
+
+
+.lower-container #detailsEmail {
+    font-size: 16px ;
+    padding-top:2px ;
+    transform : translate(0 ,-9px) ; 
+    color : white ; 
+    opacity : .8 ; 
+    font-weight: bold;
+}
+
+
+
+
+.image-container  #canvas{
+display : inline-block; 
+background:linear-gradient(130deg , #74b9ff , #e66767) ;
+width : 100px ; 
+height : 100px ; 
+border-radius: 10%;
+padding : 10px ; 
+transform: translate(92px, 25px);
+background-size : 200% 200%;
+
+margin:auto ; 
+animation: animated-gradient 2s linear infinite;
+
+} 
+@keyframes animated-gradient{
+    25%{
+        background-position:  left bottom;
+
+    }
+    50%{
+
+        background-position : right bottom ;
+
+    }
+    75%{
+        background-position: right top ;
+
+    }
+    100%{
+        background-position: left top ;
+
+    }
+
+}
+
+
+
+
+.lower-container #detailsGithub {
+    font-size : 16px ; 
+    color : white ; 
+    margin-bottom : 0px ; 
+    font-weight: bold ;
+    opacity: 0.8 ;   
+    
+}
+
+
+.lower-container #close{
+    display: inline-block;
+
+    padding : 4px , 4px ; 
+    background: #7F00FF ; 
+    border: none ; 
+    color : white ;
+    border-radius:  30px ;
+    font-size: 22px ;
+    text-decoration: none ; 
+    font-weight: bold ; 
+    transition: all .3s ease-in ; 
+
+}
+
+.lower-container #close:hover{
+    background : transparent ; 
+    color: #7F00FF ; 
+    border : 2px solid #7F00FF; 
+
+}
+
+/* .lower-container #close{
+    display:inline-block; 
+    color : #e66767; 
+    border : 2px solid #e66767;
+    border-radius: 6px ; 
+    padding : 12px 50px ;  
+    transition : .3s linear ; 
+
+
+}
+
+.lower-container #close:hover{
+    background: #e66767; 
+    color :     #f2f2f2; 
+
+} */
+
+
+.sm {
+    transform : translate(0px, -19px ) ;
+    display: flex ; 
+    justify-content : center;
+    margin: 2px 2px ; 
+}
+
+.sm a{
+    color : #f2f2f2; 
+    width : 56px ; 
+    font-size: 22px ;
+    transition : .3s linear ; 
+}
+
+.sm a:hover{    
+    color :#e66767 ; 
+
+}
+
+#detailsTwitter{
+    color : white ; 
+    font-weight : bold ; 
+    opacity : 0.7 ; 
+    transform : translate(0,-5px)
+}
