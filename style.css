@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display')
+*
 
-*{
+{
     margin:0 ; 
     padding:0; 
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     font-family: 'Poppins', sans-serif;
 
 
@@ -344,8 +345,79 @@ animation: animated-gradient 2s linear infinite;
 }
 
 #detailsTwitter{
-    color : white ; 
+    color : rgb(255, 255, 255) ; 
     font-weight : bold ; 
     opacity : 0.7 ; 
     transform : translate(0,-5px)
 }
+
+
+#emailVerificationText {
+    display : block ; 
+    color : #000 ; 
+    font-weight : 300;
+    font-style :italic ; 
+    padding : 5px ; 
+    /* background : url(invalid.png) ; 
+    background-size: cover;  */
+    transform: translate(130px, -40px);
+
+
+
+}
+
+
+form .email9417{
+    position: relative; 
+}
+#qrForm.invalid .email9417:before {
+    content: '' ; 
+    position: absolute;
+    right: 12px ; 
+    top: 12px ; 
+    width : 24px ; 
+    height : 24px ; 
+    background : url(invalid.png); 
+    background-size: cover;
+    z-index: 1000;
+    transform: translate(0px, 9px );
+
+    
+
+
+}
+#qrForm.valid .email9417:before {
+    content: '' ; 
+    position: absolute;
+    right: 12px ; 
+    top: 12px ; 
+    width : 24px ; 
+    height : 24px ; 
+    background : url(valid.png); 
+    background-size: cover;
+    z-index: 1000;
+    transform: translate(0px, 10px );
+    
+
+
+}
+
+.inputContainer span{
+    position: absolute;
+    /* bottom :9px ; 
+    right : 1px ;  */
+    transform: translate(180px, -25px);
+    font-size : 14px ; 
+    color :red; 
+
+} 
+
+.inputContainer span i {
+    transform: translate(70px, 0px)   ;
+    color : green ; 
+
+}  
+
+
+
+
